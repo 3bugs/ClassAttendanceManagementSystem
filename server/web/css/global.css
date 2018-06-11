@@ -1,0 +1,235 @@
+body, html { width:100%; height:100%; margin:0; padding: 0; }
+
+body.waiting * {
+    cursor: progress;
+}
+
+.page-header { border-bottom:none; }
+.table > tbody > tr > td { vertical-align:middle; }
+
+.center-div {
+    width: 32px;
+    height: 32px;
+    border-radius: 5px;
+    position: absolute;
+    margin-top: -16px;
+    margin-left: -16px;
+    top: 50%;
+    left: 50%;
+}
+
+span.highlight {
+    padding: 10px;
+    background-color: yellow;
+}
+
+/* Bordered form */
+form {
+    /*border: 3px solid #f1f1f1;*/
+}
+
+/* Full-width inputs */
+input[type=text], input[type=password], textarea {
+    background-color: white;
+    width: 100%;
+    padding: 18px 14px 18px 14px;
+    font-size: larger;
+    margin: 4px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+#cover_image_container {
+    background-color: white;
+    width: 224px;
+    height: 224px;
+    padding: 12px;
+    margin: 4px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: #091E5F; /*#4CAF50;*/
+    color: white;
+    padding: 14px 20px;
+    margin: 4px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+label {
+    color: #333;
+    margin-top: 16px;
+}
+
+/* Add a hover effect for buttons */
+button:hover {
+    opacity: 0.8;
+}
+
+/* Add padding to containers */
+.container {
+    background-color: rgba(255, 255, 255, 0.90);
+    border: 5px solid #f1f1f1;
+    padding: 24px;
+    width: auto;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+        display: block;
+        float: none;
+    }
+    .cancelbtn {
+        width: 100%;
+    }
+}
+
+#error_div {
+    width: 100%;
+    text-align: center;
+    color: #f00;
+    font-weight: bold;
+}
+
+#category_select {
+    width: 100%;
+}
+
+.navbar-brand {
+    padding: 5px 10px 0 10px;
+}
+
+.nav .breadcrumb {
+    margin: 10px 10px 0 10px;
+}
+@media (min-width: 768px) {
+    .nav .breadcrumb {
+        float: left;
+        margin: 10px 10px;
+    }
+}
+
+/*.bottom-panel {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    bottom: 1;
+    width: 100%;
+}
+
+.bottom-panel a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.main-content {
+    width: 100%;
+    margin-bottom: 200px;
+}*/
+
+#actions_navbar {
+    background: #9c27b0;
+    border-color: #6a1b9a;
+}
+#actions_navbar .navbar-brand {
+    color: #ecf0f1;
+}
+#actions_navbar .navbar-brand:hover,
+#actions_navbar .navbar-brand:focus {
+    color: #ffffff;
+}
+#actions_navbar .navbar-text {
+    color: #ecf0f1;
+}
+#actions_navbar .navbar-nav > li > a {
+    color: #ecf0f1;
+}
+#actions_navbar .navbar-nav > li > a:hover,
+#actions_navbar .navbar-nav > li > a:focus {
+    color: #ffffff;
+}
+#actions_navbar .navbar-nav > li > .dropdown-menu {
+    background: #9c27b0;
+}
+#actions_navbar .navbar-nav > li > .dropdown-menu > li > a {
+    color: #ecf0f1;
+}
+#actions_navbar .navbar-nav > li > .dropdown-menu > li > a:hover,
+#actions_navbar .navbar-nav > li > .dropdown-menu > li > a:focus {
+    color: #ffffff;
+    background: #6a1b9a;
+}
+#actions_navbar .navbar-nav > li > .dropdown-menu > li.divider {
+    background: #6a1b9a;
+}
+#actions_navbar .navbar-nav .open .dropdown-menu > .active > a,
+#actions_navbar .navbar-nav .open .dropdown-menu > .active > a:hover,
+#actions_navbar .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #ffffff;
+    background: #6a1b9a;
+}
+#actions_navbar .navbar-nav > .active > a,
+#actions_navbar .navbar-nav > .active > a:hover,
+#actions_navbar .navbar-nav > .active > a:focus {
+    color: #ffffff;
+    background: #6a1b9a;
+}
+#actions_navbar .navbar-nav > .open > a,
+#actions_navbar .navbar-nav > .open > a:hover,
+#actions_navbar .navbar-nav > .open > a:focus {
+    color: #ffffff;
+    background: #6a1b9a;
+}
+#actions_navbar .navbar-toggle {
+    border-color: #6a1b9a;
+}
+#actions_navbar .navbar-toggle:hover,
+#actions_navbar .navbar-toggle:focus {
+    background: #6a1b9a;
+}
+#actions_navbar .navbar-toggle .icon-bar {
+    background: #ecf0f1;
+}
+#actions_navbar .navbar-collapse,
+#actions_navbar .navbar-form {
+    border-color: #ecf0f1;
+}
+#actions_navbar .navbar-link {
+    color: #ecf0f1;
+}
+#actions_navbar .navbar-link:hover {
+    color: #ffffff;
+}
+
+@media (max-width: 767px) {
+    #actions_navbar .navbar-nav .open .dropdown-menu > li > a {
+        color: #ecf0f1;
+    }
+    #actions_navbar .navbar-nav .open .dropdown-menu > li > a:hover,
+    #actions_navbar .navbar-nav .open .dropdown-menu > li > a:focus {
+        color: #ffffff;
+    }
+    #actions_navbar .navbar-nav .open .dropdown-menu > .active > a,
+    #actions_navbar .navbar-nav .open .dropdown-menu > .active > a:hover,
+    #actions_navbar .navbar-nav .open .dropdown-menu > .active > a:focus {
+        color: #ffffff;
+        background: #6a1b9a;
+    }
+}
