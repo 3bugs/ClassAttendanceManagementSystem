@@ -6,4 +6,14 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
+
+    <string name="title_scan_qr">สแกนโค้ดเข้าเรียน</string>
+    <string name="title_class_attendance">ตรวจสอบเวลาเรียน</string>
+    <string name="title_scan_qr_short">สแกนโค้ด</string>
+    <string name="title_class_attendance_short">เวลาเรียน</string>
+    <string name="title_profile">ข้อมูลส่วนตัว</string>
+    <string name="title_logout">ออกจากระบบ</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

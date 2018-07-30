@@ -17,10 +17,10 @@ public class LocalDb {
     private static final int DATABASE_VERSION = 1;
 
     // เทเบิล user
-    // +-----+----+----------+--------------+
-    // | _id | id | username | display_name |
-    // +-----+----+----------+--------------+
-    // |     |    |          |              |
+    // +-----+---------+----------+--------------+
+    // | _id | user_id | username | display_name |
+    // +-----+---------+----------+--------------+
+    // |     |         |          |              |
 
     private static final String TABLE_USER = "user";
     private static final String COL_ID = "_id";

@@ -4,23 +4,32 @@ import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.design.internal.BottomNavigationMenuView;
+import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.DisplayMetrics;
+import android.util.TypedValue;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
+import android.view.ViewGroup;
 import android.widget.TextView;
 
 import java.util.Locale;
 
 import example.com.classattendancemanagementsystem.db.LocalDb;
 import example.com.classattendancemanagementsystem.etc.Utils;
+import example.com.classattendancemanagementsystem.fragment.ClassAttendanceFragment;
+import example.com.classattendancemanagementsystem.fragment.ScanQrCodeFragment;
 import example.com.classattendancemanagementsystem.model.User;
 import example.com.classattendancemanagementsystem.net.ApiClient;
 import example.com.classattendancemanagementsystem.net.AttendClassResponse;
@@ -31,11 +40,36 @@ import retrofit2.Retrofit;
 
 import static example.com.classattendancemanagementsystem.QrScanActivity.KEY_QR_CODE_TEXT;
 
-public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+public class MainActivity extends AppCompatActivity implements
+        NavigationView.OnNavigationItemSelectedListener,
+        ScanQrCodeFragment.ScanQrCodeFragmentListener,
+        ClassAttendanceFragment.ClassAttendanceFragmentListener {
 
     private static final String TAG = MainActivity.class.getName();
     private static final int REQUEST_SCAN_QR_CODE = 1;
+
+    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
+            = new BottomNavigationView.OnNavigationItemSelectedListener() {
+
+        @Override
+        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+            switch (item.getItemId()) {
+                case R.id.nav_action_scan_qr:
+                    popAllBackStack();
+                    loadFragment(new ScanQrCodeFragment());
+                    return true;
+                case R.id.nav_action_class_attendance:
+                    popAllBackStack();
+                    loadFragment(new ClassAttendanceFragment());
+                    return true;
+                case R.id.nav_action_profile:
+                    popAllBackStack();
+                    //loadMapFragment();
+                    return true;
+            }
+            return false;
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,15 +77,8 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
 
         setupToolbarAndDrawer();
-
-        Button scanQrButton = findViewById(R.id.scan_qr_code_button);
-        scanQrButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, QrScanActivity.class);
-                startActivityForResult(intent, REQUEST_SCAN_QR_CODE);
-            }
-        });
+        setupBottomNav();
+        loadFragment(new ScanQrCodeFragment());
     }
 
     private void setupToolbarAndDrawer() {
@@ -74,6 +101,35 @@ public class MainActivity extends AppCompatActivity
         User user = new LocalDb(this).getUser();
         displayNameTextView.setText(user.displayName);
         usernameTextView.setText(user.username);
+    }
+
+    private void setupBottomNav() {
+        BottomNavigationView bottomNav = findViewById(R.id.bottom_nav);
+        bottomNav.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+
+        BottomNavigationMenuView menuView = (BottomNavigationMenuView) bottomNav.getChildAt(0);
+        for (int i = 0; i < menuView.getChildCount(); i++) {
+            final View iconView = menuView.getChildAt(i).findViewById(android.support.design.R.id.icon);
+            final ViewGroup.LayoutParams layoutParams = iconView.getLayoutParams();
+            final DisplayMetrics displayMetrics = getResources().getDisplayMetrics();
+            layoutParams.height = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 36, displayMetrics);
+            layoutParams.width = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 36, displayMetrics);
+
+            iconView.setLayoutParams(layoutParams);
+        }
+    }
+
+    private void popAllBackStack() {
+        FragmentManager fm = getSupportFragmentManager();
+        for (int i = 0; i < fm.getBackStackEntryCount(); ++i) {
+            fm.popBackStack();
+        }
+    }
+
+    private void loadFragment(Fragment fragment) {
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.fragment_container, fragment)
+                .commit();
     }
 
     @Override
@@ -140,9 +196,8 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
-        return true;
+        return false;
     }
 
     @Override
@@ -161,11 +216,15 @@ public class MainActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         int id = item.getItemId();
 
-        if (id == R.id.nav_course) {
-            // Handle the camera action
-        } else if (id == R.id.nav_attendance) {
+        if (id == R.id.nav_action_scan_qr) {
+            popAllBackStack();
+            loadFragment(new ScanQrCodeFragment());
+        } else if (id == R.id.nav_action_class_attendance) {
+            popAllBackStack();
+            loadFragment(new ClassAttendanceFragment());
+        } else if (id == R.id.nav_action_profile) {
 
-        } else if (id == R.id.nav_logout) {
+        } else if (id == R.id.nav_action_logout) {
             logout();
         }
 
@@ -195,5 +254,11 @@ public class MainActivity extends AppCompatActivity
                     }
                 })
                 .show();
+    }
+
+    @Override
+    public void onClickScanQrCodeButton() {
+        Intent intent = new Intent(MainActivity.this, QrScanActivity.class);
+        startActivityForResult(intent, REQUEST_SCAN_QR_CODE);
     }
 }
