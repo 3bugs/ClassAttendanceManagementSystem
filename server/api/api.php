@@ -16,6 +16,7 @@ $action = strtolower(array_shift($request));
 $id = array_shift($request);
 
 require_once '../db_config.php';
+//require_once '../web_new/include/utils.php';
 $db = new mysqli(DB_SERVER, DB_USER, DB_PASSWORD, DB_DATABASE);
 
 if ($db->connect_errno) {
@@ -37,6 +38,12 @@ switch ($action) {
     case 'insert_class_attendance':
         doInsertClassAttendance($_POST['class_id'], $_POST['student_id']);
         break;
+    case 'select_course_by_student':
+        doSelectCourseByStudent($_POST['student_id']);
+        break;
+    case 'select_class_attendance':
+        doSelectClassAttendance($_POST['course_id'], $_POST['student_id']);
+        break;
     default:
         $response[KEY_ERROR_CODE] = ERROR_CODE_INVALID_ACTION;
         $response[KEY_ERROR_MESSAGE] = 'No action specified or invalid action.';
@@ -52,8 +59,14 @@ function doInsertStudent($username, $displayName, $table = 'student')
 {
     global $db, $response;
 
-    $insertSql = "INSERT INTO $table (username, display_name) VALUES ('$username', '$displayName')";
-    $insertResult = $db->query($insertSql);
+    $sql = "SELECT username FROM $table WHERE username = '$username'";
+    if ($result = $db->query($sql)) {
+        if ($result->num_rows == 0) {
+            $insertSql = "INSERT INTO $table (username, display_name) VALUES ('$username', '$displayName')";
+            $insertResult = $db->query($insertSql);
+        }
+        $result->close();
+    }
 
     $selectSql = "SELECT id, username, display_name from $table WHERE username = '$username'";
     $selectResult = $db->query($selectSql);
@@ -74,6 +87,7 @@ function doInsertStudent($username, $displayName, $table = 'student')
             $response[KEY_ERROR_MESSAGE] = 'เกิดข้อผิดพลาดในการบันทึกข้อมูลผู้ใช้ลงฐานข้อมูล';
             $response[KEY_ERROR_MESSAGE_MORE] = '';
         }
+        $selectResult->close();
     } else {
         $response[KEY_ERROR_CODE] = ERROR_CODE_SQL_ERROR;
         $response[KEY_ERROR_MESSAGE] = 'เกิดข้อผิดพลาดในการเชื่อมต่อฐานข้อมูล';
@@ -135,6 +149,104 @@ function doInsertClassAttendance($classId, $studentId)
         $errMessage = $db->error;
         $response[KEY_ERROR_MESSAGE_MORE] = "$errMessage\nSQL: $insertSql";
     }
+}
+
+function doSelectCourseByStudent($studentId)
+{
+    global $db, $response;
+
+    $sql = "SELECT c.id AS course_id, c.code AS course_code, c.name AS course_name FROM course c INNER JOIN class cl INNER JOIN class_attendance ca "
+        . " ON c.id = cl.course_id AND cl.id = ca.class_id "
+        . " WHERE ca.student_id = $studentId GROUP BY course_id ORDER BY course_id ";
+    if ($result = $db->query($sql)) {
+        $response[KEY_ERROR_CODE] = ERROR_CODE_SUCCESS;
+        $response[KEY_ERROR_MESSAGE] = '';
+        $response[KEY_ERROR_MESSAGE_MORE] = '';
+        $response['course_list'] = array();
+
+        while ($row = $result->fetch_assoc()) {
+            $course = array();
+            $course['id'] = (int)$row['course_id'];
+            $course['code'] = $row['course_code'];
+            $course['name'] = $row['course_name'];
+            array_push($response['course_list'], $course);
+        }
+        $result->close();
+    } else {
+        $response[KEY_ERROR_CODE] = ERROR_CODE_SQL_ERROR;
+        $response[KEY_ERROR_MESSAGE] = 'เกิดข้อผิดพลาดในการเชื่อมต่อฐานข้อมูล';
+        $errMessage = $db->error;
+        $response[KEY_ERROR_MESSAGE_MORE] = "$errMessage\nSQL: $sql";
+    }
+}
+
+function doSelectClassAttendance($courseId, $studentId)
+{
+    global $db, $response;
+
+    $sql = "SELECT cl.class_number AS class_number, cl.class_date AS class_date, ca.created_at AS attend_date "
+        . " FROM class cl LEFT JOIN "
+        . " (SELECT * FROM class_attendance WHERE student_id = $studentId) AS ca "
+        . " ON cl.id = ca.class_id "
+        . " WHERE cl.course_id = $courseId "
+        . " ORDER BY class_number";
+    if ($result = $db->query($sql)) {
+        $response[KEY_ERROR_CODE] = ERROR_CODE_SUCCESS;
+        $response[KEY_ERROR_MESSAGE] = '';
+        $response[KEY_ERROR_MESSAGE_MORE] = '';
+        $response['class_attendance_list'] = array();
+
+        while ($row = $result->fetch_assoc()) {
+            $ca = array();
+            $ca['class_number'] = (int)$row['class_number'];
+            $ca['class_date'] = $row['class_date'];
+            $ca['attend_date'] = $row['attend_date'];
+            if (!is_null($row['attend_date'])) {
+                $attendDate = new DateTime($row['attend_date']);
+                $classDate = new DateTime($row['class_date']);
+
+                $attendDatePart = explode(" ", $row['attend_date']);
+                $ca['attend_date_format'] = formatThaiShortDate($attendDatePart[0]);
+                $ca['attend_time_format'] = formatTime($attendDatePart[1]);
+
+                $dateDiff = $classDate->diff($attendDate);
+                $minutes = $dateDiff->days * 24 * 60;
+                $minutes += $dateDiff->h * 60;
+                $minutes += $dateDiff->i;
+
+                $ca['date_diff_minutes'] = $minutes;
+            } else {
+                $ca['attend_date_format'] = NULL;
+                $ca['attend_time_format'] = NULL;
+                $ca['date_diff_minutes'] = NULL;
+            }
+            array_push($response['class_attendance_list'], $ca);
+        }
+        $result->close();
+    } else {
+        $response[KEY_ERROR_CODE] = ERROR_CODE_SQL_ERROR;
+        $response[KEY_ERROR_MESSAGE] = 'เกิดข้อผิดพลาดในการเชื่อมต่อฐานข้อมูล';
+        $errMessage = $db->error;
+        $response[KEY_ERROR_MESSAGE_MORE] = "$errMessage\nSQL: $sql";
+    }
+}
+
+function formatThaiShortDate($date) {
+    $datePart = explode('-', $date);
+    $day = (int)$datePart[2];
+    $month = $datePart[1] - 1;
+    $year = $datePart[0] + 543;
+
+    $monthNameArray = array("ม.ค.", "ก.พ.", "มี.ค.", "เม.ย.", "พ.ค.", "มิ.ย.", "ก.ค.", "ส.ค.", "ก.ย.", "ต.ค.", "พ.ย.", "ธ.ค.");
+    $monthName = $monthNameArray[$month];
+    return "$day $monthName $year";
+}
+
+function formatTime($time) {
+    $timePart = explode(':', $time);
+    $hour = $timePart[0];
+    $minute = $timePart[1];
+    return "$hour.$minute";
 }
 
 ?>

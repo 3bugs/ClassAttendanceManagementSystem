@@ -10,4 +10,7 @@
 
     <color name="bottom_nav_normal">#b4b4b4</color>
     <color name="bottom_nav_checked">@android:color/white</color>
+
+    <color name="late">#ffca60</color>
+    <color name="absent">#ffa8a8</color>
 </resources>

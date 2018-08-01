@@ -57,7 +57,8 @@ require_once 'include/navbar.php';
 </div>
 
 <div class="page-header" style="text-align: center; padding-top: 50px;">
-    <h1>Class Attendance Management System</h1>
+    <h1>หลักสูตรบริหารธุรกิจบัณฑิต สาขาวิชาคอมพิวเตอร์ธุรกิจ</h1>
+    <h2>Class Attendance Management System</h2>
 </div>
 
 <div style="margin: auto auto 100px; width: 800px; border: 5px solid #51c3f2; padding: 20px 30px 30px 30px; text-align: center; ">

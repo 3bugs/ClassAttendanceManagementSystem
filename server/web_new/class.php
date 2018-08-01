@@ -17,10 +17,13 @@ if (!isset($_SESSION['year']) || !isset($_SESSION['semester'])) {
 }
 
 require_once 'connect_db.php';
+require_once 'include/utils.php';
 
 if (isset($_GET['class_id'])) {
     $classId = $_GET['class_id'];
-    $selectClassSql = "SELECT cl.class_number AS class_number, cl.class_date AS class_date, c.id AS course_id, c.code AS course_code, c.name AS course_name "
+    $selectClassSql = "SELECT cl.class_number AS class_number, cl.class_date AS class_date, "
+        . " TIME_FORMAT(cl.class_begin_time, '%H.%i') AS class_begin_time, TIME_FORMAT(cl.class_end_time, '%H.%i') AS class_end_time, "
+        . " c.id AS course_id, c.code AS course_code, c.name AS course_name "
         . " FROM class cl INNER JOIN course c ON cl.course_id = c.id "
         . " WHERE cl.id = $classId";
     $selectClassResult = $db->query($selectClassSql);
@@ -33,12 +36,10 @@ if (isset($_GET['class_id'])) {
             $courseName = $selectClassRow['course_name'];
 
             $classDateTimePart = explode(' ', $classDateTime);
-            $classDate = $classDateTimePart[0];
-            $classDatePart = explode('-', $classDate);
-            $day = $classDatePart[2];
-            $month = $classDatePart[1];
-            $year = $classDatePart[0];
-            $classDate = "$day/$month/$year";
+            $classDate = formatThaiShortDate($classDateTimePart[0]);
+
+            $classBeginTime = $selectClassRow['class_begin_time'];
+            $classEndTime = $selectClassRow['class_end_time'];
         } else {
             echo "Error: ไม่มีคลาส ID: $classId";
             exit();
@@ -106,23 +107,30 @@ if (isset($_GET['class_id'])) {
     </div>
 
     <div class="page-header" style="text-align: center; padding-top: 50px;">
-        <h1>วิชา <?php echo "$courseCode<br>$courseName"; ?></h1>
+        <h1>หลักสูตรบริหารธุรกิจบัณฑิต สาขาวิชาคอมพิวเตอร์ธุรกิจ</h1>
+        <h2>วิชา <?php echo "$courseCode $courseName"; ?></h2>
     </div>
 
     <div id="div_table" class="table-responsive" style="margin: 0 100px 50px;">
         <table class="table table-bordered">
             <tr>
-                <td width="50%" align="center"><h2><?php echo "เรียนครั้งที่ $classNumber"; ?></h2></td>
-                <td width="50%" align="center"><h2 style="font-family: monospace;"><strong><?php echo $classDate; ?></strong></h2></td>
+                <td width="30%" align="center">
+                    <h2><?php echo "เรียนครั้งที่ $classNumber"; ?></h2>
+                </td>
+                <td width="70%" align="center">
+                    <h2 style="font-family: monospace;">
+                        <?php echo $classDate; ?>, <?php echo $classBeginTime ?>-<?php echo $classEndTime; ?> น.
+                    </h2>
+                </td>
             </tr>
             <tr>
                 <td colspan="2">
                     <table width="100%">
                         <tr>
-                            <td width="50%" align="center">
+                            <td width="30%" align="center">
                                 <img src="qr.php?code=<?php echo $classId; ?>" width="250px" height="250px">
                             </td>
-                            <td width="50%" valign="top" align="center">
+                            <td width="70%" valign="top" align="center">
                                 <h3><u>รายชื่อนักศึกษาเข้าเรียน</u></h3>
                                 <div id="student_list_div"></div>
                             </td>

@@ -17,6 +17,7 @@ if (!isset($_SESSION['year']) || !isset($_SESSION['semester'])) {
 }
 
 require_once 'connect_db.php';
+require_once 'include/utils.php';
 
 if (isset($_GET['course_id'])) {
     $courseId = $_GET['course_id'];
@@ -43,6 +44,8 @@ if (isset($_GET['course_id'])) {
 if (isset($_POST['submit'])) {
     $classNumber = $_POST['class_number'];
     $classDate = $_POST['class_date'];
+    $classBeginTime = $_POST['class_begin_time'];
+    $classEndTime = $_POST['class_end_time'];
 
     $sql = "SELECT * FROM class WHERE course_id = $courseId AND class_number = $classNumber";
     $result = $db->query($sql);
@@ -55,9 +58,10 @@ if (isset($_POST['submit'])) {
             $day = $classDatePart[0];
             $month = $classDatePart[1];
             $year = $classDatePart[2];
-            $classDate = "$year-$month-$day 00:00:00";
+            $classDate = "$year-$month-$day $classBeginTime:00";
 
-            $insertClassSql = "INSERT INTO class (course_id, class_number, class_date) VALUES ($courseId, $classNumber, '$classDate')";
+            $insertClassSql = "INSERT INTO class (course_id, class_number, class_date, class_begin_time, class_end_time) "
+                . " VALUES ($courseId, $classNumber, '$classDate', '$classBeginTime', '$classEndTime')";
             $insertClassResult = $db->query($insertClassSql);
             if ($insertClassResult) {
                 $insertClassSuccess = TRUE;
@@ -78,7 +82,8 @@ if (isset($_POST['submit'])) {
     <html>
     <head>
         <?php require_once 'include/header.php'; ?>
-
+        <script src="scripts/clockpicker.js"></script>
+        <link rel="stylesheet" href="css/clockpicker.css">
         <script>
             $(document).ready(function () {
                 $("#class_date_input").datepicker({
@@ -88,6 +93,8 @@ if (isset($_POST['submit'])) {
                     dateFormat: 'dd/mm/yy',
                     showAnim: 'slide'
                 });
+
+                $('.clockpicker').clockpicker();
             });
         </script>
 
@@ -113,7 +120,8 @@ if (isset($_POST['submit'])) {
     </div>
 
     <div class="page-header" style="text-align: center; padding-top: 50px;">
-        <h1>วิชา <?php echo "$courseCode<br>$courseName"; ?></h1>
+        <h1>หลักสูตรบริหารธุรกิจบัณฑิต สาขาวิชาคอมพิวเตอร์ธุรกิจ</h1>
+        <h2>วิชา <?php echo "$courseCode $courseName"; ?></h2>
     </div>
 
     <?php
@@ -135,7 +143,7 @@ if (isset($_POST['submit'])) {
         }
     }
 
-    $sql = "SELECT * FROM class WHERE course_id = $courseId ";
+    $sql = "SELECT id, class_number, class_date, TIME_FORMAT(class_begin_time, '%H.%i') AS class_begin_time, TIME_FORMAT(class_end_time, '%H.%i') AS class_end_time FROM class WHERE course_id = $courseId ";
     $result = $db->query($sql);
     if ($result) {
         ?>
@@ -144,9 +152,11 @@ if (isset($_POST['submit'])) {
             <table id="data_table" class="table table-striped table-bordered" width="100%">
                 <thead>
                 <tr>
-                    <td width="20%" align="center" bgcolor="#90A2F6" class="title"><strong>เรียนครั้งที่</strong></td>
-                    <td width="40%" align="center" bgcolor="#90A2F6" class="title"><strong>วันที่เรียน</strong></td>
-                    <td width="40%" align="center" bgcolor="#90A2F6" class="title"><strong>ข้อมูลคิวอาร์โค้ดและรายชื่อนักศึกษา</strong></td>
+                    <td width="" align="center" bgcolor="#90A2F6" class="title"><strong>เรียนครั้งที่</strong></td>
+                    <td width="" align="center" bgcolor="#90A2F6" class="title"><strong>วันที่เรียน</strong></td>
+                    <td width="" align="center" bgcolor="#90A2F6" class="title"><strong>เวลาเรียน</strong></td>
+                    <td width="" align="center" bgcolor="#90A2F6" class="title"><strong>ข้อมูลคิวอาร์โค้ดและรายชื่อนักศึกษา</strong>
+                    </td>
                 </tr>
                 </thead>
                 <tbody>
@@ -155,18 +165,22 @@ if (isset($_POST['submit'])) {
                     while ($row = $result->fetch_assoc()) {
                         $dateTime = $row['class_date'];
                         $dateTimePart = explode(' ', $dateTime);
-                        $date = $dateTimePart[0];
-                        $datePart = explode('-', $date);
+                        $date = formatThaiShortDate($dateTimePart[0]);
+                        /*$datePart = explode('-', $date);
                         $day = $datePart[2];
                         $month = $datePart[1];
                         $year = $datePart[0];
-                        $date = "$day/$month/$year";
+                        $date = "$day/$month/$year";*/
                         ?>
                         <tr>
                             <td align="center" style="vertical-align: text-top; font-family: monospace; ">
                                 <?php echo $row['class_number']; ?>
                             </td>
-                            <td align="center" style="vertical-align: text-top; font-family: monospace;"><?php echo $date; ?></td>
+                            <td align="center"
+                                style="vertical-align: text-top; font-family: monospace;"><?php echo $date; ?></td>
+                            <td align="center" style="vertical-align: text-top; font-family: monospace;">
+                                <?php echo $row['class_begin_time'] . '-' . $row['class_end_time'] . ' น.'; ?>
+                            </td>
                             <td align="center" style="vertical-align: text-top;">
                                 <a class="btn btn-info" href="class.php?class_id=<?php echo $row['id']; ?>">ข้อมูลการเข้าเรียน</a>
                             </td>
@@ -176,7 +190,7 @@ if (isset($_POST['submit'])) {
                 } else {
                     ?>
                     <tr>
-                        <td align="center" colspan="3" style="vertical-align: text-top;">ไม่มีข้อมูล</td>
+                        <td align="center" colspan="4" style="vertical-align: text-top;">ไม่มีข้อมูล</td>
                     </tr>
                     <?php
                 }
@@ -193,20 +207,41 @@ if (isset($_POST['submit'])) {
             <form method="post">
                 <table width="100%" cellpadding="5px">
                     <tr>
-                        <td width="30%">
-                            <label for="class_number" class="title">เรียนครั้งที่</label><br>
-                            <select class="form-control" name="class_number" required>
+                        <td width="25%">
+                            <label for="class_number_select" class="title">เรียนครั้งที่</label><br>
+                            <select class="form-control" id="class_number_select" name="class_number" required>
                                 <?php
-                                $sql = "SELECT MAX(class_number) max_class_number FROM class WHERE course_id = $courseId";
+                                $sql = "SELECT class_number, TIME_FORMAT(class_begin_time, '%H:%i') AS class_begin_time, TIME_FORMAT(class_end_time, '%H:%i') AS class_end_time FROM class WHERE course_id = $courseId ORDER BY class_number DESC LIMIT 1";
+                                if ($result = $db->query($sql)) {
+                                    if ($result->num_rows > 0) {
+                                        $row = $result->fetch_assoc();
+                                        $nextClassNumber = $row['class_number'] + 1;
+                                        $beginTime = $row['class_begin_time'];
+                                        $endTime = $row['class_end_time'];
+                                    } else {
+                                        $nextClassNumber = 1;
+                                        $beginTime = '';
+                                        $endTime = '';
+                                    }
+                                    $result->close();
+                                }
+
+
+                                /*$sql = "SELECT MAX(class_number) max_class_number FROM class WHERE course_id = $courseId";
                                 $result = $db->query($sql);
                                 if ($result) {
                                     $row = $result->fetch_assoc();
                                     $maxClassNumber = $row['max_class_number'];
                                     $result->close();
-                                }
+                                }*/
                                 //$selected = '';
                                 for ($i = 1; $i <= 15; $i++) {
-                                    if (isset($maxClassNumber) && !is_null($maxClassNumber)) {
+                                    if ($i == $nextClassNumber) {
+                                        $selected = 'selected';
+                                    } else {
+                                        $selected = '';
+                                    }
+                                    /*if (isset($maxClassNumber) && !is_null($maxClassNumber)) {
                                         if ($i == $maxClassNumber + 1) {
                                             $selected = 'selected';
                                         } else {
@@ -218,7 +253,7 @@ if (isset($_POST['submit'])) {
                                         } else {
                                             $selected = '';
                                         }
-                                    }
+                                    }*/
                                     ?>
 
                                     <option values="<?php echo $i; ?>" <?php echo $selected; ?>><?php echo $i; ?></option>
@@ -227,14 +262,39 @@ if (isset($_POST['submit'])) {
                                 ?>
                             </select>
                         </td>
-                        <td width="70%">
-                            <label for="course_name" class="title">วันที่เรียน</label><br>
-                            <input class="form-control" type="text" id="class_date_input" name="class_date" style="font-family: monospace;" required>
+                        <td width="35%">
+                            <label for="class_date_input" class="title">วันที่เรียน</label><br>
+                            <input class="form-control" type="text" id="class_date_input" name="class_date"
+                                   style="font-family: monospace;" required>
                             <!--<input class="form-control" type="text" name="class_date" size="20" required/>-->
+                        </td>
+                        <td width="20%">
+                            <label for="class_begin_time_input" class="title">เวลาเริ่ม</label><br>
+                            <!--<input class="form-control" type="time" id="class_begin_time_input" name="class_begin_time"
+                                   min="6:00" max="18:00" style="font-family: monospace;" required/>-->
+                            <div class="input-group clockpicker" data-placement="top" data-align="top" data-autoclose="true">
+                                <input class="form-control" type="text" id="class_begin_time_input" name="class_begin_time"
+                                       value="<?php echo $beginTime; ?>" style="font-family: monospace;" required>
+                                <!--<span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-time"></span>
+                                </span>-->
+                            </div>
+                        </td>
+                        <td width="20%">
+                            <label for="class_end_time_input" class="title">เวลาเลิก</label><br>
+                            <!--<input class="form-control" type="time" id="class_end_time_input" name="class_end_time" min="6:00" max="18:00" style="font-family: monospace;" required />-->
+
+                            <div class="input-group clockpicker" data-placement="top" data-align="top" data-autoclose="true">
+                                <input class="form-control" type="text" id="class_end_time_input" name="class_end_time"
+                                       value="<?php echo $endTime; ?>" style="font-family: monospace;" required>
+                                <!--<span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-time"></span>
+                                </span>-->
+                            </div>
                         </td>
                     </tr>
                     <tr>
-                        <td colspan="2" align="center">
+                        <td colspan="4" align="center">
                             <input class="btn btn-primary" type="submit" name="submit" value=" เพิ่ม "
                                    style="margin-top: 10px; "/>
                         </td>

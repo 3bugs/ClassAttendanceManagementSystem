@@ -33,4 +33,11 @@ public interface WebServices {
     Call<GetCourseResponse> getCourseByStudent(
             @Field("student_id") int userId
     );
+
+    @FormUrlEncoded
+    @POST("api.php/select_class_attendance")
+    Call<GetClassAttendanceResponse> getClassAttendance(
+            @Field("course_id") int courseId,
+            @Field("student_id") int studentId
+    );
 }

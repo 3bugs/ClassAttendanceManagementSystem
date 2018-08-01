@@ -72,7 +72,8 @@ $phpSelf = $_SERVER['PHP_SELF'];
     </div>
 
     <div class="page-header" style="text-align: center; padding-top: 50px;">
-        <h1>ภาคการศึกษา <?php echo $semester; ?> ปีการศึกษา <?php echo $year; ?></h1>
+        <h1>หลักสูตรบริหารธุรกิจบัณฑิต สาขาวิชาคอมพิวเตอร์ธุรกิจ</h1>
+        <h2>ภาคการศึกษา <?php echo $semester; ?> ปีการศึกษา <?php echo $year; ?></h2>
     </div>
 
     <?php
