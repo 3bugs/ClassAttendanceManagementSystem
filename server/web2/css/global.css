@@ -80,14 +80,21 @@ button:hover {
 
 /* Add padding to containers */
 .container {
-    background-color: rgba(255, 255, 255, 0.90);
-    border: 5px solid #f1f1f1;
+    background-color: rgba(255, 255, 255, 1.0);
+    /*border: 5px solid #f1f1f1;*/
     padding: 24px;
     width: auto;
     margin-left: 20px;
     margin-right: 20px;
     margin-top: 60px;
     margin-bottom: 20px;
+
+    border: solid 1px #cccccc;
+    border-radius: 6px;
+    /*box-shadow:  0 0 10px  rgba(80, 80, 80, 0.5);
+    -moz-box-shadow: 0 0 10px  rgba(80, 80, 80, 0.5);
+    -webkit-box-shadow: 0 0 10px  rgba(80, 80, 80, 0.5);
+    -o-box-shadow: 0 0 10px  rgba(80, 80, 80, 0.5);*/
 }
 
 /* Change styles for span and cancel button on extra small screens */

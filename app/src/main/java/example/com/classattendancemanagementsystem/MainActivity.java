@@ -30,6 +30,7 @@ import example.com.classattendancemanagementsystem.db.LocalDb;
 import example.com.classattendancemanagementsystem.etc.Utils;
 import example.com.classattendancemanagementsystem.fragment.ClassAttendanceFragment;
 import example.com.classattendancemanagementsystem.fragment.ScanQrCodeFragment;
+import example.com.classattendancemanagementsystem.fragment.UserProfileFragment;
 import example.com.classattendancemanagementsystem.model.User;
 import example.com.classattendancemanagementsystem.net.ApiClient;
 import example.com.classattendancemanagementsystem.net.AttendClassResponse;
@@ -43,7 +44,8 @@ import static example.com.classattendancemanagementsystem.QrScanActivity.KEY_QR_
 public class MainActivity extends AppCompatActivity implements
         NavigationView.OnNavigationItemSelectedListener,
         ScanQrCodeFragment.ScanQrCodeFragmentListener,
-        ClassAttendanceFragment.ClassAttendanceFragmentListener {
+        ClassAttendanceFragment.ClassAttendanceFragmentListener,
+        UserProfileFragment.UserProfileFragmentListener {
 
     private static final String TAG = MainActivity.class.getName();
     private static final int REQUEST_SCAN_QR_CODE = 1;
@@ -64,7 +66,7 @@ public class MainActivity extends AppCompatActivity implements
                     return true;
                 case R.id.nav_action_profile:
                     popAllBackStack();
-                    //loadMapFragment();
+                    loadFragment(new UserProfileFragment());
                     return true;
             }
             return false;
@@ -74,7 +76,7 @@ public class MainActivity extends AppCompatActivity implements
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main_content);
 
         setupToolbarAndDrawer();
         setupBottomNav();
@@ -82,25 +84,25 @@ public class MainActivity extends AppCompatActivity implements
     }
 
     private void setupToolbarAndDrawer() {
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        /*Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);*/
 
-        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+        /*DrawerLayout drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
-        toggle.syncState();
+        toggle.syncState();*/
 
-        NavigationView navigationView = findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
+        //NavigationView navigationView = findViewById(R.id.nav_view);
+        //navigationView.setNavigationItemSelectedListener(this);
 
-        View headerView = navigationView.getHeaderView(0);
-        TextView displayNameTextView = headerView.findViewById(R.id.display_name_text_view);
-        TextView usernameTextView = headerView.findViewById(R.id.username_text_view);
+        //View headerView = navigationView.getHeaderView(0);
+        //TextView displayNameTextView = headerView.findViewById(R.id.display_name_text_view);
+        //TextView usernameTextView = headerView.findViewById(R.id.username_text_view);
 
-        User user = new LocalDb(this).getUser();
-        displayNameTextView.setText(user.displayName);
-        usernameTextView.setText(user.username);
+        //User user = new LocalDb(this).getUser();
+        //displayNameTextView.setText(user.displayName);
+        //usernameTextView.setText(user.username);
     }
 
     private void setupBottomNav() {
@@ -186,12 +188,14 @@ public class MainActivity extends AppCompatActivity implements
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+        super.onBackPressed();
+
+        /*DrawerLayout drawer = findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
             super.onBackPressed();
-        }
+        }*/
     }
 
     @Override

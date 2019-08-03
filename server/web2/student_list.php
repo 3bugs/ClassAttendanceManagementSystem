@@ -29,28 +29,40 @@ if ($result = $db->query($sql)) {
     $output = <<<EOT
     <table class="table table-bordered">
         <tr>
-            <th>รหัสนักศึกษา</th>
-            <th>ชื่อ-นามสกุล</th>
-            <th>วันที่เข้าเรียน</th>
-            <th>เวลาเข้าเรียน</th>
-            <th>สถานะ</th>
+            <th class="text-center">ลำดับ</th>
+            <th class="text-center">รหัสนักศึกษา</th>
+            <th class="text-center">ชื่อ-นามสกุล</th>
+            <th class="text-center">วันที่เข้าเรียน</th>
+            <th class="text-center">เวลาเข้าเรียน</th>
+            <th class="text-center">สถานะ</th>
         </tr>
 EOT;
+    $count = 0;
     while ($row = $result->fetch_assoc()) {
+        $count++;
         $studentId = substr($row['username'], 1);
         $displayName = $row['display_name'];
         $attendDatePart = explode(" ", $row['attend_date']);
         $attendDate = formatThaiShortDate($attendDatePart[0]);
         $attendTime = formatTime($attendDatePart[1]);
         $timeDiffMinute = $row['time_diff_minute'] - 15;
+
+        $bgColor = 'white';
+        if ($timeDiffMinute > 0 && $timeDiffMinute <= 120) {
+            $bgColor = 'yellow';
+        } else if ($timeDiffMinute > 120) {
+            $bgColor = '#ff4500';
+        }
+
         if ($timeDiffMinute > 0) {
             $lateStudents++;
         }
-        $rowStyle = $timeDiffMinute > 0 ? 'style="background: #FFBFC5"' : '';
+        //$rowStyle = $timeDiffMinute > 0 ? 'style="background: #FFBFC5"' : '';
         $statusText = $timeDiffMinute > 0 ? "มาสาย $timeDiffMinute นาที" : "ตรงเวลา";
         $output .= <<<EOT2
-            <tr $rowStyle>
-                <td style="font-family: monospace;">$studentId</td>
+            <tr bgcolor="$bgColor">
+                <td style="font-family: monospace;" class="text-center">$count</td>
+                <td style="font-family: monospace;" class="text-center">$studentId</td>
                 <td>$displayName</td>
                 <td style="font-family: monospace;">$attendDate</td>
                 <td style="font-family: monospace;">$attendTime น.</td>
@@ -66,7 +78,7 @@ EOT2;
     <?php
     echo $output;
 } else {
-    echo 'Error: เกิดข้อผิดพลาดในการดึงข้อมูลจากฐานข้อมูล';
+    echo 'Error: เกิดข้อผิดพลาดในการดึงข้อมูลจากฐานข้อมูล: ' . $db->error;
 }
 
 $db->close();

@@ -1,13 +1,186 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fb51462f-0dc9-4b98-925b-b51cfbe08470" name="Default" comment="" />
+    <list default="true" id="fb51462f-0dc9-4b98-925b-b51cfbe08470" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/../app/src/main/java/example/com/classattendancemanagementsystem/fragment/UserProfileFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app/src/main/res/layout/fragment_user_profile.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web2/include/foot.inc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web2/include/footer.inc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web2/include/head.inc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web2/include/header.inc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web2/include/sidebar.inc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web2/include/sidebar_smart_vote.inc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web2/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web2/login.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web2/select_year_semester_tmp.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web2/template.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/example/com/classattendancemanagementsystem/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/example/com/classattendancemanagementsystem/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/res/menu/activity_main_drawer.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/res/menu/activity_main_drawer.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/class.php" beforeDir="false" afterPath="$PROJECT_DIR$/web2/class.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/connect_db.php" beforeDir="false" afterPath="$PROJECT_DIR$/web2/connect_db.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/course.php" beforeDir="false" afterPath="$PROJECT_DIR$/web2/course.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/css/clockpicker.css" beforeDir="false" afterPath="$PROJECT_DIR$/web2/css/clockpicker.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/css/global.css" beforeDir="false" afterPath="$PROJECT_DIR$/web2/css/global.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/css/standalone.css" beforeDir="false" afterPath="$PROJECT_DIR$/web2/css/standalone.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/web2/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/images/avatar.png" beforeDir="false" afterPath="$PROJECT_DIR$/web2/images/avatar.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/images/bg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/web2/images/bg.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/images/ic_loading.gif" beforeDir="false" afterPath="$PROJECT_DIR$/web2/images/ic_loading.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/images/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/web2/images/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/include/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/web2/include/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/include/navbar.php" beforeDir="false" afterPath="$PROJECT_DIR$/web2/include/navbar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/include/utils.php" beforeDir="false" afterPath="$PROJECT_DIR$/web2/include/utils.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/web2/index_old.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/login.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/CHANGELOG" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/CHANGELOG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/INSTALL" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/INSTALL" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/README" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/README" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/VERSION" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/VERSION" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/bindings/tcpdf/qrcode.php" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/bindings/tcpdf/qrcode.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/frame_1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/frame_1.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/frame_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/frame_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/frame_10.dat" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/frame_10.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/frame_11.dat" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/frame_11.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/frame_11.png" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/frame_11.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/frame_12.dat" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/frame_12.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/frame_12.png" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/frame_12.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/frame_13.dat" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/frame_13.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/frame_13.png" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/frame_13.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/frame_14.dat" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/frame_14.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/frame_14.png" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/frame_14.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/frame_15.dat" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/frame_15.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/frame_15.png" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/frame_15.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/frame_16.dat" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/frame_16.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/frame_16.png" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/frame_16.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/frame_17.dat" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/frame_17.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/frame_17.png" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/frame_17.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/frame_18.dat" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/frame_18.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/frame_18.png" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/frame_18.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/frame_19.dat" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/frame_19.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/frame_19.png" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/frame_19.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/frame_2.dat" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/frame_2.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/frame_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/frame_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/frame_20.dat" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/frame_20.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/frame_20.png" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/frame_20.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/frame_21.dat" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/frame_21.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/frame_21.png" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/frame_21.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/frame_22.dat" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/frame_22.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/frame_22.png" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/frame_22.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/frame_23.dat" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/frame_23.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/frame_23.png" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/frame_23.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/frame_24.dat" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/frame_24.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/frame_24.png" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/frame_24.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/frame_25.dat" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/frame_25.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/frame_25.png" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/frame_25.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/frame_26.dat" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/frame_26.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/frame_26.png" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/frame_26.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/frame_27.dat" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/frame_27.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/frame_27.png" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/frame_27.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/frame_28.dat" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/frame_28.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/frame_28.png" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/frame_28.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/frame_29.dat" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/frame_29.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/frame_29.png" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/frame_29.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/frame_3.dat" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/frame_3.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/frame_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/frame_3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/frame_30.dat" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/frame_30.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/frame_30.png" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/frame_30.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/frame_31.dat" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/frame_31.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/frame_31.png" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/frame_31.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/frame_32.dat" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/frame_32.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/frame_32.png" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/frame_32.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/frame_33.dat" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/frame_33.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/frame_33.png" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/frame_33.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/frame_34.dat" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/frame_34.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/frame_34.png" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/frame_34.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/frame_35.dat" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/frame_35.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/frame_35.png" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/frame_35.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/frame_36.dat" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/frame_36.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/frame_36.png" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/frame_36.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/frame_37.dat" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/frame_37.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/frame_37.png" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/frame_37.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/frame_38.dat" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/frame_38.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/frame_38.png" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/frame_38.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/frame_39.dat" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/frame_39.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/frame_39.png" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/frame_39.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/frame_4.dat" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/frame_4.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/frame_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/frame_4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/frame_40.dat" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/frame_40.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/frame_40.png" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/frame_40.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/frame_5.dat" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/frame_5.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/frame_5.png" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/frame_5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/frame_6.dat" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/frame_6.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/frame_6.png" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/frame_6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/frame_7.dat" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/frame_7.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/frame_7.png" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/frame_7.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/frame_8.dat" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/frame_8.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/frame_8.png" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/frame_8.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/frame_9.dat" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/frame_9.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/frame_9.png" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/frame_9.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/mask_0/mask_101_0.dat" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/mask_0/mask_101_0.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/mask_0/mask_105_0.dat" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/mask_0/mask_105_0.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/mask_0/mask_109_0.dat" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/mask_0/mask_109_0.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/mask_0/mask_113_0.dat" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/mask_0/mask_113_0.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/mask_0/mask_117_0.dat" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/mask_0/mask_117_0.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/mask_0/mask_121_0.dat" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/mask_0/mask_121_0.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/mask_0/mask_125_0.dat" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/mask_0/mask_125_0.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/mask_0/mask_129_0.dat" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/mask_0/mask_129_0.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/mask_0/mask_133_0.dat" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/mask_0/mask_133_0.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/mask_0/mask_137_0.dat" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/mask_0/mask_137_0.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/mask_0/mask_141_0.dat" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/mask_0/mask_141_0.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/mask_0/mask_145_0.dat" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/mask_0/mask_145_0.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/mask_0/mask_149_0.dat" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/mask_0/mask_149_0.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/mask_0/mask_21_0.dat" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/mask_0/mask_21_0.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/mask_1/mask_21_1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/mask_1/mask_21_1.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/mask_2/mask_21_2.dat" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/mask_2/mask_21_2.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/mask_3/mask_21_3.dat" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/mask_3/mask_21_3.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/mask_4/mask_21_4.dat" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/mask_4/mask_21_4.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/mask_5/mask_21_5.dat" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/mask_5/mask_21_5.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/mask_6/mask_21_6.dat" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/mask_6/mask_21_6.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/cache/mask_7/mask_21_7.dat" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/cache/mask_7/mask_21_7.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/phpqrcode.php" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/phpqrcode.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/qrbitstream.php" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/qrbitstream.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/qrconfig.php" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/qrconfig.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/qrconst.php" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/qrconst.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/qrencode.php" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/qrencode.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/qrimage.php" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/qrimage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/qrinput.php" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/qrinput.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/qrlib.php" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/qrlib.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/qrmask.php" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/qrmask.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/qrrscode.php" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/qrrscode.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/qrspec.php" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/qrspec.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/qrsplit.php" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/qrsplit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/qrtools.php" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/qrtools.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/tools/merge.bat" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/tools/merge.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/tools/merge.php" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/tools/merge.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/tools/merge.sh" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/tools/merge.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/tools/merged_config.php" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/tools/merged_config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/phpqrcode/tools/merged_header.php" beforeDir="false" afterPath="$PROJECT_DIR$/web2/phpqrcode/tools/merged_header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/qr.php" beforeDir="false" afterPath="$PROJECT_DIR$/web2/qr.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/scripts/clockpicker.js" beforeDir="false" afterPath="$PROJECT_DIR$/web2/scripts/clockpicker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/scripts/global.js" beforeDir="false" afterPath="$PROJECT_DIR$/web2/scripts/global.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/scripts/sprintf.js" beforeDir="false" afterPath="$PROJECT_DIR$/web2/scripts/sprintf.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/select_year_semester.php" beforeDir="false" afterPath="$PROJECT_DIR$/web2/select_year_semester.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_new/student_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/web2/student_list.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/AdminLTE-2.4.5/composer.json</pharConfigPath>
+    <execution>
+      <executable />
+    </execution>
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -20,145 +193,33 @@
     <expand />
     <select />
   </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="api.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/api.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4074">
-              <caret line="194" column="42" selection-start-line="194" selection-start-column="42" selection-end-line="194" selection-end-column="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
-        <entry file="file://$USER_HOME$/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="8" column="74" selection-start-line="8" selection-start-column="74" selection-end-line="8" selection-end-column="74" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>phpSelf</find>
       <find>$ph</find>
       <find>$phpSelf</find>
+      <find>DocumentRoo</find>
+      <find>Dashboard</find>
     </findStrings>
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/api.php" />
-        <option value="$PROJECT_DIR$/ldap.php" />
-        <option value="$PROJECT_DIR$/backend/qr.php" />
-        <option value="$PROJECT_DIR$/backend/student_list.php" />
-        <option value="$PROJECT_DIR$/backend/header.php" />
-        <option value="$PROJECT_DIR$/backend/index.php" />
-        <option value="$PROJECT_DIR$/web/scripts/global.js" />
-        <option value="$PROJECT_DIR$/db_config.php" />
-        <option value="$PROJECT_DIR$/api/ldap.php" />
-        <option value="$PROJECT_DIR$/web/course_details.php" />
-        <option value="$PROJECT_DIR$/web/class_list.php" />
-        <option value="$PROJECT_DIR$/web/css/global.css" />
-        <option value="$PROJECT_DIR$/web/include/header.php" />
-        <option value="$PROJECT_DIR$/web/index.php" />
-        <option value="$PROJECT_DIR$/web/class.php" />
-        <option value="$PROJECT_DIR$/web/connect_db.php" />
-        <option value="$PROJECT_DIR$/web/student_list.php" />
-        <option value="$PROJECT_DIR$/web/include/navbar.php" />
-        <option value="$PROJECT_DIR$/web/course.php" />
-        <option value="$PROJECT_DIR$/web/login.php" />
-        <option value="$PROJECT_DIR$/web/1.php" />
-        <option value="$PROJECT_DIR$/web_new/class.php" />
-        <option value="$PROJECT_DIR$/web_new/index.php" />
-        <option value="$PROJECT_DIR$/web_new/select_year_semester.php" />
-        <option value="$PROJECT_DIR$/web_new/include/navbar.php" />
-        <option value="$PROJECT_DIR$/web_new/course.php" />
-        <option value="$USER_HOME$/Ebooks/index.html" />
-        <option value="$PROJECT_DIR$/api/api.php" />
-        <option value="$USER_HOME$/install.html" />
-        <option value="$USER_HOME$/install_temlitr.php" />
-        <option value="$USER_HOME$/index.php" />
-      </list>
-    </option>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
-  </component>
-  <component name="NodePackageJsonFileManager">
-    <packageJsonPaths />
-  </component>
-  <component name="PhpServers">
-    <servers />
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="65" />
-    <option name="y" value="-4" />
-    <option name="width" value="1855" />
-    <option name="height" value="1084" />
-  </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="CAMS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CAMS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CAMS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="web_new" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CAMS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="web_new" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CAMS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="web_new" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CAMS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="web_new" type="462c0819:PsiDirectoryNode" />
-              <item name="include" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CAMS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="bcb0276e:PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
+  <component name="ProjectId" id="1OtdBQnKFkvS0YU4vTt5phvztHz" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
-    <property name="last_opened_file_path" value="$USER_HOME$/1/laravel" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
@@ -167,10 +228,11 @@
       <recent name="C:\Users\Promlert\AndroidStudioProjects\_StudentProjects\ClassAttendanceManagementSystem\server\api" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web2" />
+      <recent name="$PROJECT_DIR$/web_new" />
+      <recent name="$PROJECT_DIR$/web_new/include" />
       <recent name="C:\Users\Promlert\AndroidStudioProjects\_StudentProjects\ClassAttendanceManagementSystem\server\web" />
       <recent name="C:\Users\Promlert\AndroidStudioProjects\_StudentProjects\ClassAttendanceManagementSystem\server\web\images" />
-      <recent name="C:\Users\Promlert\AndroidStudioProjects\_StudentProjects\ClassAttendanceManagementSystem\server\web\include" />
-      <recent name="C:\Users\Promlert\AndroidStudioProjects\_StudentProjects\ClassAttendanceManagementSystem\server" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -212,395 +274,30 @@
       <workItem from="1533195841251" duration="280000" />
       <workItem from="1533269268687" duration="4554000" />
       <workItem from="1533538752909" duration="76000" />
+      <workItem from="1534559037693" duration="146000" />
+      <workItem from="1534565251689" duration="1111000" />
+      <workItem from="1534731787092" duration="599000" />
+      <workItem from="1535338956486" duration="704000" />
+      <workItem from="1535451164840" duration="55000" />
+      <workItem from="1548478232127" duration="13841000" />
+      <workItem from="1552106532644" duration="10088000" />
+      <workItem from="1552193840280" duration="1744000" />
+      <workItem from="1564800692764" duration="3686000" />
     </task>
     <servers />
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="114637000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="64" y="-11" width="1857" height="1092" extended-state="6" />
-    <layout>
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Quick Notes" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12722372" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="right" id="Database" order="3" weight="0.24360341" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
-    </layout>
-    <layout-to-restore>
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.10341151" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="right" id="Database" order="3" weight="0.24360341" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/api/api.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="91" lean-forward="true" selection-start-line="7" selection-start-column="91" selection-end-line="7" selection-end-column="91" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/qr.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="2" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/index_old.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/student_list.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/ldap.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="988">
-          <caret line="52" selection-start-line="52" selection-end-line="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db_config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/api.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="91" lean-forward="true" selection-start-line="7" selection-start-column="91" selection-end-line="7" selection-end-column="91" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/qr.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="2" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/index_old.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2432">
-          <caret line="128" column="77" lean-forward="true" selection-start-line="128" selection-start-column="77" selection-end-line="128" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/student_list.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/ldap.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="988">
-          <caret line="52" selection-start-line="52" selection-end-line="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db_config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/api.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="26" lean-forward="true" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/qr.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="2" lean-forward="true" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/index_old.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="817">
-          <caret line="43" column="21" lean-forward="true" selection-start-line="43" selection-start-column="21" selection-end-line="43" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/student_list.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/global.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="2" lean-forward="true" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/images/logo.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/qr.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="2" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/scripts/global.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/ldap.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="665">
-          <caret line="70" column="66" selection-start-line="70" selection-start-column="66" selection-end-line="70" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="39" lean-forward="true" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/1.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="16" column="7" lean-forward="true" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/include/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="2" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/connect_db.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="1" selection-start-line="1" selection-end-line="14" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/include/navbar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="35" column="21" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/global.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="113" column="18" selection-start-line="113" selection-start-column="18" selection-end-line="113" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/index_old.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db_config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/course.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="30" column="1" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="566">
-          <caret line="68" column="60" selection-start-line="68" selection-start-column="60" selection-end-line="68" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/student_list.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="651">
-          <caret line="31" column="2" selection-start-line="31" selection-start-column="2" selection-end-line="31" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web_new/images/bg.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web_new/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2205" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2796">
-          <caret line="148" column="69" selection-start-line="148" selection-start-column="69" selection-end-line="148" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web_new/css/global.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="21" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web_new/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="91" lean-forward="true" selection-start-line="7" selection-start-column="91" selection-end-line="7" selection-end-column="91" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web_new/connect_db.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$USER_HOME$/Ebooks/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="12" column="110" selection-start-line="12" selection-start-column="110" selection-end-line="12" selection-end-column="110" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web_new/class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
-          <caret line="54" column="1" selection-start-line="54" selection-start-column="1" selection-end-line="54" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web_new/include/navbar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="17" column="54" selection-start-line="17" selection-start-column="54" selection-end-line="17" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web_new/select_year_semester.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="881">
-          <caret line="72" column="54" selection-start-line="72" selection-start-column="54" selection-end-line="72" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web_new/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web_new/include/utils.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="26" column="2" selection-start-line="26" selection-start-column="2" selection-end-line="26" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/api.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4074">
-          <caret line="194" column="42" selection-start-line="194" selection-start-column="42" selection-end-line="194" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web_new/course.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2058">
-          <caret line="98" column="17" lean-forward="true" selection-start-line="86" selection-start-column="8" selection-end-line="98" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="74" selection-start-line="8" selection-start-column="74" selection-end-line="8" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

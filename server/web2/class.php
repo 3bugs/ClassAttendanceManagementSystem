@@ -119,8 +119,18 @@ if (isset($_GET['class_id'])) {
                 </td>
                 <td width="70%" align="center">
                     <h2 style="font-family: monospace;">
-                        <?php echo $classDate; ?>, <?php echo $classBeginTime ?>-<?php echo $classEndTime; ?> น.
+                        <strong><?php echo $classDate; ?></strong>
                     </h2>
+                </td>
+            </tr>
+            <tr>
+                <td width="30%" align="center">
+                    <h3>เวลา</h3>
+                </td>
+                <td width="70%" align="center">
+                    <h3 style="font-family: monospace;">
+                        <strong><?php echo $classBeginTime ?> - <?php echo $classEndTime; ?> น.</strong>
+                    </h3>
                 </td>
             </tr>
             <tr>

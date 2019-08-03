@@ -179,7 +179,7 @@ if (isset($_POST['submit'])) {
                             <td align="center"
                                 style="vertical-align: text-top; font-family: monospace;"><?php echo $date; ?></td>
                             <td align="center" style="vertical-align: text-top; font-family: monospace;">
-                                <?php echo $row['class_begin_time'] . '-' . $row['class_end_time'] . ' น.'; ?>
+                                <?php echo $row['class_begin_time'] . ' - ' . $row['class_end_time'] . ' น.'; ?>
                             </td>
                             <td align="center" style="vertical-align: text-top;">
                                 <a class="btn btn-info" href="class.php?class_id=<?php echo $row['id']; ?>">ข้อมูลการเข้าเรียน</a>
